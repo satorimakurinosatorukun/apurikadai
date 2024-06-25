@@ -9,6 +9,7 @@
     <table border="2">
         <tr>
             <th>スタート</th>
+            //start
             
         </tr>
     </table>
