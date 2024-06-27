@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
 
-#st{
-    transform:translateX(700%);
-    transform:translateY(700%);
+#st_button{
+    display: block;
+    margin: auto;
 }
