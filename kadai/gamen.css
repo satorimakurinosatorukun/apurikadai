@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
 
-h1{
+.h1{
     height: 10px;
 }
-sr{
-    
+.sr{
+    display: flex;
+    text-align: center;
 }
