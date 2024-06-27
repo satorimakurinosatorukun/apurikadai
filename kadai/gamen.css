@@ -4,6 +4,9 @@
     height: 10px;
 }
 .sr{
+    width: 400px;
     display: flex;
     text-align: center;
+
+
 }
