@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
 
-.line-height-center{
+head.line-height-center{
     height: 100px;
     line-height: 100px;
 }
