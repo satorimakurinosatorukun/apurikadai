@@ -1,18 +1,23 @@
 #ar{
     display: block;
     font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
     text-decoration:none;
-    line-height: 2;
-    padding:10px 10;
+    width: 300px;
+    margin:auto;
+    padding:2rem 1rem;
     font-weight:bold;
-    border:2px solid #27acd9;
-    color:#27acd9;
+    border-bottom:7px solid #0686b2;
+    color:#fff;
     border-radius: 100vh;
-    transition:0.5s;
+    background: #27acd9;
+    writing-mode: horizontal-tb;
 }
 #ar:hover{
-    color:#fff;
-    background: #27acd9;
+    margin-top: 6px;
+    border-bottom:1px solid #0686b2;
+    color: #fff;
 }
 
 #sr{
