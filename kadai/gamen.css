@@ -2,17 +2,15 @@
 
 #st{
     display: block;
-    text-align:center;
+    font-size: 25px;
     text-decoration:none;
-    width: 120px;
-    margin: auto;
-    padding: 1rem 1rem;
-    font-weight: bold;
+    line-height: 3;
+    padding:10px 10;
+    font-weight:bold;
     border:2px solid #27acd9;
     color:#27acd9;
     border-radius: 100vh;
     transition:0.5s;
-
 }
 #st:hover{
     color:#fff;
