@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
 
-#st_button{
+#st{
     display: block;
+    text-align:center;
+    text-decoration:none;
+    width: 120px;
     margin: auto;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    border:2px solid #27acd9;
+    color:#27acd9;
+    border-radius: 100vh;
+    transition:0.5s;
+}
+#st:hover{
+    color:#fff;
+    background: #27acd9;
 }
