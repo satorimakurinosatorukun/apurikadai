@@ -16,9 +16,35 @@
     transition: 0.5s;
     position: relative;
     top:400px;
-    left: 20px;
+    left: 180px;
 }
 #back_button2:hover{
     color:#fff;
     background-image: linear-gradient(to right,#27acd9 0%,#b4e12b 100%);
+}
+
+#result{
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 300px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#ff0000 0%,#ffff00 100%);
+    border-radius: 100vh;
+    color:#000000;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: 0.5s;
+    position: relative;
+    top:460px;
+    right: 180px;
+}
+
+#result:hover{
+    color:#fff;
+    background-image: linear-gradient(to right,#ff0000 0%,#ffff00 100%);
 }
