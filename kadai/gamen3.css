@@ -23,6 +23,10 @@
     background-image: linear-gradient(to right,#27acd9 0%,#b4e12b 100%);
 }
 
+body{
+    background: #ffffff url(haikei.jpeg);
+}
+
 #result{
     display: block;
     text-align: center;

@@ -3,6 +3,10 @@ h1{
     top:100px;
 }
 
+body{
+    background: #ffffff url(haikei.jpeg);
+}
+
 
 #ar{
     display: block;
