@@ -44,16 +44,10 @@ try {
             <tr>
                 <th width="100" height="80">恋愛運</th>
                 <th width="100" height="80">仕事運</th>
-                <th width="100" height="80">ゲーム運</th>
-                <th width="100" height="80">運動運</th>
-                <th width="100" height="80">帰宅運</th>
             </tr>
             <tr>
                 <th width="100" height="80">金運</th>
                 <th width="100" height="80">健康運</th>
-                <th width="100" height="80">勝負運</th>
-                <th width="100" height="80">結婚運</th>
-                <th width="100" height="80">学問運</th>
             </tr>
         </table>
     </div>
