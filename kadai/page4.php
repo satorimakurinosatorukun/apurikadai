@@ -60,7 +60,7 @@ try {
 
 <!-- 戻るボタン -->
 <div id="back_button3">
-    <a class="Button3" href="page3.html">戻る</a>
+    <a class="Button3" href="page3.html" text align="center">戻る</a>
 </div>
 </body>
 </html>
