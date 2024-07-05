@@ -8,7 +8,7 @@
 <body>
     <h1>運気設定</h1>
     <div>
-        <table border="1">
+        <table border="1" align="center">
             <tr>
                 <th width="100" height="80">恋愛運</th>
                 <th width="100" height="80">仕事運</th>
