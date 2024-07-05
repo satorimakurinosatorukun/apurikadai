@@ -1,3 +1,35 @@
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "omikuji";
+$dsn = "mysql:host={$host};dbname={$dbname};charset=utf8";
+
+// HTMLエスケープ用の関数
+function es($data) {
+    return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+}
+try {
+    $pdo = new PDO($dsn , $user , $password);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "データベース{$dbname}接続<br>";
+
+    $sql = "SELECT * FROM unki";
+    $stm = $pdo->prepare($sql);
+    $stm->execute();
+    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+    
+    #es関数の処理は上のfunction esに記述している
+    foreach ($result as $row) {
+    }
+} catch(Exception $e) {
+    echo '<span>エラー</span><br>';
+    echo $e->getMessage();
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
