@@ -1,0 +1,114 @@
+
+<データベース接続PHP>
+----------------------------------------------------------------------
+<?php
+$host = "localhost:3306";
+$user = "root";
+$password = "";
+$dbname = "";
+$dsn = "mysql:host={$host};dbname={$dbname};charset=utf8";
+
+// HTMLエスケープ用の関数
+function es($data) {
+    return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+}
+?>
+------------------------------------------------------------------------
+$dbname = "";
+    ""に作成したデータベースの名前を入れる
+------------------------------------------------------------------------
+
+
+
+<データベース接続確認用PHP>
+------------------------------------------------------------------------
+<?php
+try {
+    $pdo = new PDO($dsn , $user , $password);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "データベース{$dbname}接続<br>";
+
+    $sql = "SELECT * FROM Test001";
+    $stm = $pdo->prepare($sql);
+    $stm->execute();
+    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+    
+    #es関数の処理は上のfunction esに記述している
+    foreach ($result as $row) {
+    }
+} catch(Exception $e) {
+    echo '<span>エラー</span><br>';
+    echo $e->getMessage();
+    exit();
+}
+?>
+------------------------------------------------------------------------
+$pdo = new PDO($dsn , $user , $password);
+    データベースに接続し、PDOオブジェクトを作成
+
+$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    プリペアドステートメントのエミュレーションを無効にする
+    あってもなくてもいいSQLインジェクション対策
+    使うと変数を代入するSQLが使いにくくなる
+
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    エラーモードを例外に設定
+
+echo "データベース{$dbname}接続<br>";
+    データベース接続に成功したことを表示
+
+$sql = "SELECT * FROM ○○○○ WHERE ○○○○";
+    SQLクエリを作成
+
+$stm = $pdo->prepare($sql);
+    プリペアドステートメントを準備
+
+$stm->execute();
+    プリペアドステートメントを実行
+
+$result = $stm->fetchAll(PDO::FETCH_ASSOC);
+    結果セットを連想配列として取得
+
+foreach ($result as $row) 
+    取得した各行に対して処理を実行（具体的な処理は省略）
+
+
+catch(Exception $e)
+    上記プログラムでエラーが起きた時catchに入る
+
+echo $e->getMessage();
+    例外メッセージを表示
+
+exit();
+    スクリプトを終了
+------------------------------------------------------------------------
+
+
+
+
+<SQL>
+------------------------------------------------------------------------
+(呼び出し)
+SELECT 取り出したい文字 FROM 表 WHERE 条件
+    表からデータを取り出す
+
+(追加)
+INSERT INTO テーブル名 (列名1, 列名2,...) VALUES (値1, 値2,...)
+    列名はデータベースに保存されている名前
+    値は追加したいもの
+
+(削除)
+DELETE FROM 表 WHERE 条件
+    チェックボックスに印が入っているものを消去したい
+    やり方は未定
+
+(更新)
+UPDATE 表 SET 更新情報 WHERE 条件
+------------------------------------------------------------------------
+$sql = "SELECT * FROM Test001";
+$stm = $pdo->prepare($sql);
+$stm->execute();
