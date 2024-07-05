@@ -1,3 +1,9 @@
+.flex {
+    display: flex;
+}
+
+
+
 #back_button3{
     text-align: center;
     display: block;
@@ -18,4 +24,23 @@
 #back_button3{
     color:#fff;
     background: #27acd9;
+}
+.unpi {
+    width: 100;
+    height: 100;
+}
+
+#aaa-1 input{
+    display: inline-block;
+    width: 250px; 
+    font-size: 40;
+
+}
+.touroku_button {
+    text-align: center;
+    
+}
+.sakujo_button {
+    text-align: right;
+
 }
