@@ -42,17 +42,18 @@ try {
     <div>
         <table border="1" align="center">
             <tr>
-                <th width="100" height="80">恋愛運</th>
-                <th width="100" height="80">仕事運</th>
+                <th width="100" height="80"><input type="text">恋愛運</th>
+                <th width="100" height="80"><input type="text">仕事運</th>
             </tr>
             <tr>
-                <th width="100" height="80">金運</th>
-                <th width="100" height="80">健康運</th>
+                <th width="100" height="80"><input type="text">金運</th>
+                <th width="100" height="80"><input type="text">健康運</th>
             </tr>
         </table>
     </div>
 
 <!-- 戻るボタン -->
+
 <div id="back_button3">
     <a class="Button3" href="page3.html" text align="center">戻る</a>
 </div>
