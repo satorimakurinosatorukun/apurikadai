@@ -33,7 +33,7 @@
     
 <h1>あなたの運勢おみくじタッチで占いましょう！！ </h1>
 <div id="startbutton">
-    <a class="Button3" href="page2.html"> ス タ ー ト </a>
+    <a class="Button3" href="page2.php"> ス タ ー ト </a>
 </div>
     
     <img id="om" src="omikuziirasuto1.jpeg" alt="おみくじの画像" class="right" width="150">
