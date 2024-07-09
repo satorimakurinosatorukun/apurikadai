@@ -13,50 +13,73 @@ try {
     $pdo = new PDO($dsn , $user , $password);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);//->　は　〜の
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベース{$dbname}接続<br>";
 
     // $sql = "SELECT * FROM unki";
     // $stm = $pdo->prepare($sql);
     // $stm->execute();
 
     if($_SERVER["REQUEST_METHOD"]  == "POST"){
-        echo 'a';
-        $new_un1 = $_POST['un_1'];
-        $sql_update = "UPDATE unki SET un = :sql_1 WHERE ID = 1 ";
-        $stm_update = $pdo->prepare($sql_update);
-        $stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
-        $stm_update->execute();
+        if(isset($_POST['touroku_b'])){
+            //ID１の登録
+            $new_un1 = $_POST['un_1'];
+            $sql_update = "UPDATE unki SET un = :sql_1 WHERE ID = 1 ";
+            $stm_update = $pdo->prepare($sql_update);
+            $stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
+            $stm_update->execute();
 
-        echo 'b';
-        $new_un2 = $_POST['un_2'];
-        $sql_update = "UPDATE unki SET un = :sql_2 WHERE ID = 2 ";
-        $stm_update = $pdo->prepare($sql_update);
-        $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
-        $stm_update->execute();
+            //ID2の登録
+            $new_un2 = $_POST['un_2'];
+            $sql_update = "UPDATE unki SET un = :sql_2 WHERE ID = 2 ";
+            $stm_update = $pdo->prepare($sql_update);
+            $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
+            $stm_update->execute();
 
-        echo 'c';
-        $new_un3 = $_POST['un_3'];
-        $sql_update = "UPDATE unki SET un = :sql_3 WHERE ID = 3 ";
-        $stm_update = $pdo->prepare($sql_update);
-        $stm_update->bindParam(':sql_3', $new_un3, PDO::PARAM_STR);
-        $stm_update->execute();
+            //ID3の登録
+            $new_un3 = $_POST['un_3'];
+            $sql_update = "UPDATE unki SET un = :sql_3 WHERE ID = 3 ";
+            $stm_update = $pdo->prepare($sql_update);
+            $stm_update->bindParam(':sql_3', $new_un3, PDO::PARAM_STR);
+            $stm_update->execute();
 
-        echo 'd';
-        $new_un4 = $_POST['un_4'];
-        $sql_update = "UPDATE unki SET un = :sql_4 WHERE ID = 4 ";
-        $stm_update = $pdo->prepare($sql_update);
-        $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
-        $stm_update->execute();
+            //ID4の登録
+            $new_un4 = $_POST['un_4'];
+            $sql_update = "UPDATE unki SET un = :sql_4 WHERE ID = 4 ";
+            $stm_update = $pdo->prepare($sql_update);
+            $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
+            $stm_update->execute();   
+        }
+        if(isset($_POST['sakujo_b'])){
+            //ID１の登録
+            $sql_sakujo = "UPDATE unki SET un = NULL WHERE ID = 1 ";
+            //$stm_update = $pdo->prepare($sql_update);
+            //$stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
+            $stm_sakujo->execute();
 
+            // //ID2の登録
+            // $new_un2 = $_POST['un_2'];
+            // $sql_update = "UPDATE unki SET un = :sql_2 WHERE ID = 2 ";
+            // $stm_update = $pdo->prepare($sql_update);
+            // $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
+            // $stm_update->execute();
 
+            // //ID3の登録
+            // $new_un3 = $_POST['un_3'];
+            // $sql_update = "UPDATE unki SET un = :sql_3 WHERE ID = 3 ";
+            // $stm_update = $pdo->prepare($sql_update);
+            // $stm_update->bindParam(':sql_3', $new_un3, PDO::PARAM_STR);
+            // $stm_update->execute();
 
-
-
-        
-        
-        
+            // //ID4の登録
+            // $new_un4 = $_POST['un_4'];
+            // $sql_update = "UPDATE unki SET un = :sql_4 WHERE ID = 4 ";
+            // $stm_update = $pdo->prepare($sql_update);
+            // $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
+            // $stm_update->execute(); 
+            
+        }
         
     }
+        
 
 } catch(Exception $e) {
     echo '<span>エラー</span><br>';
@@ -107,12 +130,12 @@ try {
             <div class="flex">
                 <!--登録ボタン-->
                 <div class="touroku_button">
-                    <input type="submit" value="登録">
+                    <input name = "touroku_b" type="submit" value="登録">
                 </div>
 
                 <!--削除ボタン-->
                 <div class="sakujo_button">
-                    <input type="submit" value="削除">
+                    <input name = "sakujo_b" type="submit" value="削除">
                 </div>
             </div>
         </div>
