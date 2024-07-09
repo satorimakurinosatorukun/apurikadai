@@ -20,11 +20,11 @@
 </style>
 <body>
     <h1>おみくじを引いてみよう！ </h1>
-    <div class="button_01">
+    <div id="button_01">
         <!-- 運気設定画面にいく -->
         <a class="Button" href="page4.php">運気設定</a>
     </div>
-    <button id="sr">引く</button>
+    
     <div id="back_button1">
         <!-- スタート画面にいく -->
         <a class="Button1" href="page1.php">戻る</a>

@@ -33,6 +33,12 @@ function es($data) {
             line-height:10px;
         }
     </style>
+    <table id="tb">
+        <tr>
+            <td>内容</td>
+            <td>運気</td>
+        </tr>
+    </table>
     <div class="space">
         <table class="Table">
             <?php
@@ -66,9 +72,9 @@ function es($data) {
                 }
             }
 
-                echo "<thead><tr>";
-                echo "<th>運勢</th><th>今日の運勢</th>";
-                echo "</tr></thead>";
+                // echo "<thead><tr>";
+                // echo "<th>運勢</th><th>今日の運勢</th>";
+                // echo "</tr></thead>";
 
                 echo "<tbody>";
                 #es関数の処理は上のfunction esに記述している
