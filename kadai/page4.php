@@ -22,30 +22,40 @@ try {
     if($_SERVER["REQUEST_METHOD"]  == "POST"){
         echo 'a';
         $new_un1 = $_POST['un_1'];
-        $new_un2 = $_POST['un_2'];
-        // $new_un3 = $_POST['un_3'];
-        // $new_un4 = $_POST['un_4'];
+        $sql_update = "UPDATE unki SET un = :sql_1 WHERE ID = 1 ";
+        $stm_update = $pdo->prepare($sql_update);
+        $stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
+        $stm_update->execute();
 
         echo 'b';
-        $sql_update = "UPDATE unki SET un = :sql_1 WHERE ID = 1 ";
+        $new_un2 = $_POST['un_2'];
         $sql_update = "UPDATE unki SET un = :sql_2 WHERE ID = 2 ";
-        // $sql_update = "UPDATE unki SET `un`= 'c' WHERE id = 3 ";
-        // $sql_update = "UPDATE unki SET `un`= 'd' WHERE id = 4 ";
+        $stm_update = $pdo->prepare($sql_update);
+        $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
+        $stm_update->execute();
 
         echo 'c';
+        $new_un3 = $_POST['un_3'];
+        $sql_update = "UPDATE unki SET un = :sql_3 WHERE ID = 3 ";
         $stm_update = $pdo->prepare($sql_update);
-        //$stm_update = $pdo->prepare($sql_update);
-        
-        echo 'd';
-        $stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
-        $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
-        // $stm_update->bindParam(':sql_3', $new_un3, PDO::PARAM_STR);
-        // $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
-        echo 'e';
+        $stm_update->bindParam(':sql_3', $new_un3, PDO::PARAM_STR);
         $stm_update->execute();
-        //$stm_update->execute();
-        echo 'manato';
 
+        echo 'd';
+        $new_un4 = $_POST['un_4'];
+        $sql_update = "UPDATE unki SET un = :sql_4 WHERE ID = 4 ";
+        $stm_update = $pdo->prepare($sql_update);
+        $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
+        $stm_update->execute();
+
+
+
+
+
+        
+        
+        
+        
     }
 
 } catch(Exception $e) {
