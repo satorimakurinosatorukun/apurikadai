@@ -14,12 +14,8 @@ try {
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);//->　は　〜の
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // $sql = "SELECT * FROM unki";
-    // $stm = $pdo->prepare($sql);
-    // $stm->execute();
-
     if($_SERVER["REQUEST_METHOD"]  == "POST"){
-        if(isset($_POST['touroku_b'])){
+        if(isset($_POST['touroku_b'])){//登録ボタンが押された場合
             //ID１の登録
             $new_un1 = $_POST['un_1'];
             $sql_update = "UPDATE unki SET un = :sql_1 WHERE ID = 1 ";
@@ -48,39 +44,38 @@ try {
             $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
             $stm_update->execute();   
         }
-        if(isset($_POST['sakujo_b'])){
-            //ID１の登録
-            $sql_sakujo = "UPDATE unki SET un = NULL WHERE ID = 1 ";
-            //$stm_update = $pdo->prepare($sql_update);
+    }
+    if($_SERVER["REQUEST_METHOD"]  == "POST"){
+        if(isset($_POST['sakujo_b'])){//削除ボタンが押された場合
+            //ID１の削除
+            // $new_un1 = $_POST['un_1'];
+            $sql_update = "UPDATE unki SET un = NULL WHERE ID = 1 ";
+            $stm_update = $pdo->prepare($sql_update);
             //$stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
-            $stm_sakujo->execute();
+            $stm_update->execute();
 
-            // //ID2の登録
+            // ID2の登録
             // $new_un2 = $_POST['un_2'];
-            // $sql_update = "UPDATE unki SET un = :sql_2 WHERE ID = 2 ";
-            // $stm_update = $pdo->prepare($sql_update);
+            $sql_update = "UPDATE unki SET un = NULL WHERE ID = 2 ";
+            $stm_update = $pdo->prepare($sql_update);
             // $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
-            // $stm_update->execute();
+            $stm_update->execute();
 
-            // //ID3の登録
+            // ID3の登録
             // $new_un3 = $_POST['un_3'];
-            // $sql_update = "UPDATE unki SET un = :sql_3 WHERE ID = 3 ";
-            // $stm_update = $pdo->prepare($sql_update);
+            $sql_update = "UPDATE unki SET un = NULL WHERE ID = 3 ";
+            $stm_update = $pdo->prepare($sql_update);
             // $stm_update->bindParam(':sql_3', $new_un3, PDO::PARAM_STR);
-            // $stm_update->execute();
+            $stm_update->execute();
 
             // //ID4の登録
             // $new_un4 = $_POST['un_4'];
-            // $sql_update = "UPDATE unki SET un = :sql_4 WHERE ID = 4 ";
-            // $stm_update = $pdo->prepare($sql_update);
+            $sql_update = "UPDATE unki SET un = NULL WHERE ID = 4 ";
+            $stm_update = $pdo->prepare($sql_update);
             // $stm_update->bindParam(':sql_4', $new_un4, PDO::PARAM_STR);
-            // $stm_update->execute(); 
-            
-        }
-        
+            $stm_update->execute();   
+        }   
     }
-        
-
 } catch(Exception $e) {
     echo '<span>エラー</span><br>';
     echo $e->getMessage();
