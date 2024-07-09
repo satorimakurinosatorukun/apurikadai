@@ -67,7 +67,7 @@ function es($data) {
             }
 
                 echo "<thead><tr>";
-                echo "<th>運勢</th><th><今日の運勢";
+                echo "<th>運勢</th><th>今日の運勢</th>";
                 echo "</tr></thead>";
 
                 echo "<tbody>";
