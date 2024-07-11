@@ -124,15 +124,41 @@ try {
             </table>
             <div class="flex">
                 <!--登録ボタン-->
-                <div class="touroku_button" id="Touroku">
-                    <input name = "touroku_b" type="submit" value="登録">
+                <div class="touroku_button">
+                    <input name = "touroku_b" type="submit" value="登録" class="button1">
                 </div>
 
                 <!--削除ボタン!-->
-                <div class="sakujo_button" id="Sakuzyo">
-                    <input name = "sakujo_b" type="submit" value="削除">
+                <div class="sakujo_button">
+                    <input name = "sakujo_b" type="submit" value="削除" class="button2">
                 </div>
             </div>
+            <style>
+                .button1{
+                    font-size: 25pt;
+                    text-align: center;
+                    cursor: pointer;
+                    padding: 20px 20px;
+                    background: #ff0000;
+                    color: #ffffff;
+                    line-height: 1em;
+                    transition: 3s;
+                    box-shadow: 6px 6px 3px #ff0000;
+                    border: 2px solid #ff0000;
+                }
+                .button2{
+                    font-size: 25pt;
+                    text-align: center;
+                    cursor: pointer;
+                    padding: 20px 20px;
+                    background: #000066;
+                    color: #ffffff;
+                    line-height: 1em;
+                    transition: 3s;
+                    box-shadow: 6px 6px 3px #000066;
+                    border: 2px solid #000066;
+                }
+            </style>
         </div>
 
     </form>
