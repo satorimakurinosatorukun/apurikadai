@@ -2,7 +2,10 @@
     display: flex;
 }
 
-
+h1{
+    position: relative;
+    right: 160px;
+}
 
 #back_button3{
     text-align: center;
@@ -18,8 +21,8 @@
     border-radius: 100vh;
     transition:0.5s;
     position: relative;
-    top: 200px;
-    left: 280px;
+    top: 500px;
+    left: 600px;
 }
 #back_button3{
     color:#fff;
@@ -36,11 +39,55 @@
     font-size: 40;
 
 }
-.touroku_button {
-    text-align: center;
-    
-}
-.sakujo_button {
-    text-align: right;
 
+#Touroku{
+    display: block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 120px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#ff0000 0%,#ffff00 100%);
+    border-radius: 100vh;
+    color:#000000;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: 0.5s;
+    position: relative;
+    top:400px;
+    right: -150px;
+}
+
+#Touroku{
+    color:#fff;
+    background-image: linear-gradient(to right,#ff0000 0%,#ffff00 100%);
+}
+
+#Sakuzyo{
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 120px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#27acd9 0%,#b4e12b 100%);
+    border-radius: 100vh;
+    color:#fff;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: 0.5s;
+    position: relative;
+    top:400px;
+    left: -150px;
+}
+#Sakuzyo:hover{
+    color:#fff;
+    background-image: linear-gradient(to right,#27acd9 0%,#b4e12b 100%);
 }
