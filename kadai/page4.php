@@ -124,12 +124,12 @@ try {
             </table>
             <div class="flex">
                 <!--登録ボタン-->
-                <div class="touroku_button">
+                <div class="touroku_button" id="Touroku">
                     <input name = "touroku_b" type="submit" value="登録">
                 </div>
 
                 <!--削除ボタン!-->
-                <div class="sakujo_button">
+                <div class="sakujo_button" id="Sakuzyo">
                     <input name = "sakujo_b" type="submit" value="削除">
                 </div>
             </div>
