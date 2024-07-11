@@ -60,9 +60,6 @@ function es($data) {
                         $stm_update = $pdo->prepare($sql_update);
                         $stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
                         $stm_update->execute();
-                        
-                
-                
                     }
                 
                 } catch(Exception $e) {
