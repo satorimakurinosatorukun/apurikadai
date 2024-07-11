@@ -128,10 +128,10 @@ try {
                     <input name = "touroku_b" type="submit" value="登録">
                 </div>
 
-                <!--削除ボタン-->
-                <!-- <div class="sakujo_button">
+                <!--削除ボタン!-->
+                <div class="sakujo_button">
                     <input name = "sakujo_b" type="submit" value="削除">
-                </div> -->
+                </div>
             </div>
         </div>
 
