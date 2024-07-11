@@ -92,7 +92,7 @@ function es($data) {
     <button id="result">結果を見る</button>
 <!-- 戻るボタン -->
 <div id="back_button2">
-    <a class="Button2" href="page1.html">戻る</a>
+    <a class="Button2" href="page1.php">戻る</a>
 </div>
 </body>
 </html>
