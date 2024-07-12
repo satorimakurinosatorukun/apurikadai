@@ -13,24 +13,27 @@
 
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // form method = postからデータを受け取る
+        // データベースへの接続
+        $pdo = new PDO($dsn, $user, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if(isset($_POST['touroku_b'])){//登録ボタンが押された場合
             try {
-                // データベースへの接続
-                $pdo = new PDO($dsn, $user, $password);
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
                 $sql_select = "SELECT un FROM `unki`WHERE ID IN (1, 2, 3, 4)   ORDER BY RAND() LIMIT 1 ";
                 $stm_select = $pdo->prepare($sql_select);
                 $stm_select->execute();
                 $row = $stm_select->fetch(PDO::FETCH_ASSOC); // 結果を取得
 
+                $sql_select2 = "SELECT naiyou FROM `unsei`WHERE ID_0 IN (1, 2, 3, 4,5,6)   ORDER BY RAND() LIMIT 1 ";
+                $stm_select2 = $pdo->prepare($sql_select2);
+                $stm_select2->execute();
+                $row2 = $stm_select2->fetch(PDO::FETCH_ASSOC); // 結果を取得
             } catch(Exception $e) {
                 echo '<span>エラー</span><br>';
                 echo $e->getMessage();
                 exit();
             }
         }
+        
     }
 ?>  
 <!DOCTYPE html>
@@ -62,11 +65,13 @@
                 <tr>
                     <td>
                         <div>
-                            <?php echo isset($row['un']) ? es($row['un']) : ''; ?>  
+                            <?php echo isset($row2['naiyou']) ? es($row2['naiyou']) : ''; ?>  
                         </div>
                     </td> 
                     <td>
-
+                        <div>
+                            <?php echo isset($row['un']) ? es($row['un']) : ''; ?>  
+                        </div>   
                     </td> 
                 </tr>
             </table>
