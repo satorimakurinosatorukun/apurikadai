@@ -56,7 +56,7 @@
         }
     </style>
     <body>
-        <h1>結果発表！！ </h1>
+        <h1>結果発表！！</h1>
         <form action="page3.php" method="post">
             <table border="1" bgcolor="pink">
                 <tr>
@@ -82,12 +82,26 @@
             </table>
             <!-- 結果ボタン -->
             
-            <input name = "touroku_b" type="submit" id="kekka" value="結果を見る">
+            <input name = "touroku_b" type="submit" id="kekka" value="結果を見る" class="keka">
+            <style>
+                .keka{
+                    font-size: 25pt;
+                    text-align: center;
+                    cursor: pointer;
+                    padding: 20px 20px;
+                    background: #ff0000;
+                    color: #ffffff;
+                    line-height: 1em;
+                    transition: 3s;
+                    box-shadow: 6px 6px 3px #ff0000;
+                    border: 2px solid #ff0000;
+                }
+            </style>
             
         </form>
         <!-- 戻るボタン -->
         <div id="back_button2">
-            <a class="Button2" href="page1.php">戻る</a>
+            <a class="Button2" href="page1.php">タイトルへ戻る</a>
         </div>
     </body>
 </html>
