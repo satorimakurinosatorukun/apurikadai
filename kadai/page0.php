@@ -25,7 +25,7 @@
                 <label class="login-field-icon fui-lock" for="login-pass"></label>
                 </div>
 
-                <a class="btn btn-primary btn-large btn-block" href="#">login</a>
+                <a class="btn btn-primary btn-large btn-block" href="page1.php">login</a>
                 <a class="login-link" href="#">Lost your password?</a>
 
             </div>

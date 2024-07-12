@@ -7,7 +7,7 @@
 }
 body {
     font-family: Arial;
-    background-color: #3498DB;
+    background-color: #ffffff;
     padding: 50px;
 }
 .login {
@@ -15,14 +15,14 @@ body {
     width: 300px;
 }
 .login-screen {
-    background-color: #FFF;
+    background-color: hsl(200, 88%, 73%);
     padding: 20px;
     border-radius: 5px;
 }
 
 .app-title {
     text-align: center;
-    color: #777;
+    color: #e97b1b;
 }
 
 .login-form {
@@ -45,13 +45,13 @@ input {
 }
 
 input:focus {
-    border: 2px solid #3498DB;
+    border: 2px solid #3892cd;
     box-shadow: none;
 }
 
 .btn {
     border: 2px solid transparent;
-    background: #3498DB;
+    background: #ff8010;
     color: #ffffff;
     font-size: 16px;
     line-height: 25px;
