@@ -168,6 +168,12 @@ try {
     <div id="back_button3">
         <a class="Button3" href="page3.php" text align="center">戻る</a>
     </div>
+    <!--引くボタン -->
+
+    <div id="push_button3">
+        <a class="Button4" href="page3.php" text align="center">引く！</a>
+    </div>
+
     <script>
         function clearFields() {
             document.getElementsByName('un_1')[0].value = '';
