@@ -27,7 +27,7 @@
             float: right; /* 画像を右に寄せる */
             margin: 0 0 10px 10px; /* 画像の周囲に余白を付ける（任意の設定） */
         }
-     </style>
+    </style>
 </head>
 <body>
     

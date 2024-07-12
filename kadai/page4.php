@@ -128,9 +128,8 @@ try {
                 <div >
                     <input name = "touroku_b" type="submit" value="登録" class="button1">
                 </div>
-
                 <!--削除ボタン!-->
-                <div >
+                <div>
                     <input name="sakujo_b" type="submit" value="削除" class="button2" onclick="clearFields()">
                 </div>
             </div>
@@ -166,7 +165,7 @@ try {
     <!-- 戻るボタン -->
 
     <div id="back_button3">
-        <a class="Button3" href="page3.php" text align="center">戻る</a>
+        <a class="Button3" href="page2.php" text align="center">戻る</a>
     </div>
     <script>
         function clearFields() {
