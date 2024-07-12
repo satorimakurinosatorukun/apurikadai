@@ -5,19 +5,9 @@
     <link rel="stylesheet" href="gamen2.css">
     <title>おみくじ</title>
 </head>
-<style>
-    h1{
-        text-align: center;
-    }
 
-    #back_button1{
-        text-align: center;
-        writing-mode: horizontal-tb;
-    }
-
-</style>
 <body>
-    <h1>おみくじを引いてみよう！ </h1>
+    <h1>おみくじを引いてみよう！</h1>
     <div id="button_01">
         <!-- 運気設定画面にいく -->
         <a class="Button" href="page4.php">内容設定</a>
@@ -29,7 +19,7 @@
     </div>
 
     <div>
-        <table border="1"  id="hyou" >
+        <table border="1"  id="hyou">
             <tr>
                 <th width="50">1</th>
                 <th width="100" height="80">大吉</th>
@@ -54,9 +44,17 @@
                 <th width="50">6</th>
                 <th width="100" height="80">大凶</th>
             </tr>
-
         </table>
     </div>
+    <style>
+    h1{
+        text-align: center;
+    }
 
+    #back_button1{
+        text-align: center;
+        writing-mode: horizontal-tb;
+    } 
+    </style>
 </body>
 </html>
