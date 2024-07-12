@@ -21,10 +21,6 @@
         <!-- 運気設定画面にいく -->
         <a class="Button" href="page4.php">内容設定</a>
     </div>
-    <div id="sr">
-        <!-- 結果発表画面にいく -->
-        <a class="Button" href="page3.php">引く</a>
-    </div>
     
     <div id="back_button1">
         <!-- スタート画面にいく -->
