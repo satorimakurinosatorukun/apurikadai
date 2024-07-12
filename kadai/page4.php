@@ -90,7 +90,7 @@ try {
     <title>おみくじ</title>
 </head>
 <body>
-    <h1>運気設定</h1>
+    <h1>内容設定</h1>
     <form action="page4.php" method="post">
         <div>
             <table border="1" bgcolor="pink">

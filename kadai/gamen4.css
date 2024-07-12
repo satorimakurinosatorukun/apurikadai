@@ -10,7 +10,7 @@ h1{
     font-size: 40px;
     position: relative;
     top: 60px;
-    left: 590px;
+    left: 620px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -18,7 +18,7 @@ h1{
 table{
     position: relative;
     top:100px;
-    left: 400px;
+    left: 430px;
 }
 
 #back_button3{
@@ -36,7 +36,7 @@ table{
     transition:0.5s;
     position: relative;
     top: 370px;
-    left: 560px;
+    left: 590px;
 }
 #back_button3{
     color:#fff;
@@ -56,12 +56,12 @@ table{
 .button1{
     position: relative;
     top:300px;
-    left: 500px;
+    left: 530px;
 }
 .button2{
     position: relative;
     top:300px;
-    left: 595px;
+    left: 625px;
 }
 
 #push_button3{
@@ -70,7 +70,7 @@ table{
     text-decoration: none;
     position: relative;
     top: 30px;
-    right: 50px;
+    right: 20px;
     width: 140px;
     margin: auto;
     padding: 1rem 4rem;

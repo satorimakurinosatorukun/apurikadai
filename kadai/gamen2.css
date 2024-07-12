@@ -59,26 +59,3 @@ body{
     left: 950px;
 }
 
-
-    #button_01:hover.balloon{
-        display:inline;
-    }
-    .balloon{
-        position: absolute;
-        display: none;
-        padding: 2px;
-        background-color:rgba(102,102,255,0.50);
-        width:180px;
-        left:-1%;
-        font-size:80%;
-    }
-    .balloon:after{
-        border-left:12px solid rgba(102,102,255,0.50);
-        border-top:10px solid transparent;
-        border-bottom:10px solid transparent;
-        right: -12px;
-        top:5%;
-        content:"";
-        position: absolute;
-    }
-
