@@ -43,46 +43,47 @@
         <link rel="stylesheet" href="gamen3.css">
         <title>おみくじ</title>
     </head>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #ar_button{
+            display: block;
+            margin: auto;
+        }
+        #sr{
+            line-height:10px;
+        }
+    </style>
     <body>
         <h1>結果発表！！ </h1>
-        <style>
-            h1{
-                text-align: center;
-            }
-            #ar_button{
-                display: block;
-                margin: auto;
-            }
-            #sr{
-                line-height:10px;
-            }
-        </style>
         <form action="page3.php" method="post">
-            <table border="5">
+            <table border="1" bgcolor="pink">
                 <tr>
-                    <th>運勢</th> <th>内容</th> 
+                    <div id="a-1">
+                        <th>運勢</th> 
+                    </div>
+                    <div id="a-1">
+                        <th>内容</th> 
+                    </div>
                 </tr>
                 <tr>
                     <td>
-                        <div>
+                        <div id="a-1">
                             <?php echo isset($row2['naiyou']) ? es($row2['naiyou']) : ''; ?>  
                         </div>
                     </td> 
                     <td>
-                        <div>
+                        <div id="a-1">
                             <?php echo isset($row['un']) ? es($row['un']) : ''; ?>  
                         </div>   
                     </td> 
                 </tr>
             </table>
-            <!-- <button id="result" type="submit" name ="kekka_b" >
-                結果を見る
-            </button> -->
-            <div class="touroku_button" id="Touroku">
-                <input name = "touroku_b" type="submit" value="結果を見る">
-            </div>
-
-
+            <!-- 結果ボタン -->
+            
+            <input name = "touroku_b" type="submit" id="kekka" value="結果を見る">
+            
         </form>
         <!-- 戻るボタン -->
         <div id="back_button2">

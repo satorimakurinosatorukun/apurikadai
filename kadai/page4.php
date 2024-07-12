@@ -98,24 +98,25 @@ try {
                     <tr>
                         <th>
                             <div id="aaa-1">
-                                <input type="text" name = "un_1" value="恋愛運">
+                                <input type="text" name="un_1" value="<?php echo es($_POST['un_1'] ?? '恋愛運'); ?>">
                             </div>
                         </th>
                         <th>
                             <div id="aaa-1">
-                                <input type="text" name = "un_2" value="仕事運">
+                                <input type="text" name="un_2" value="<?php echo es($_POST['un_2'] ?? '仕事運'); ?>">
                             </div>
                         </th>
                     </tr>
                     <tr>
                         <th>
                             <div id="aaa-1">
-                                <input type="text" name = "un_3" value="金運">
+                                <input type="text" name="un_3" value="<?php echo es($_POST['un_3'] ?? '金運'); ?>">
+
                             </div>
                         </th>
                         <th>
                             <div id="aaa-1">
-                                <input type="text" name = "un_4" value="健康運">
+                                <input type="text" name="un_4" value="<?php echo es($_POST['un_4'] ?? '健康運'); ?>">
                             </div>
                         </th>
                     </tr>
@@ -130,7 +131,7 @@ try {
 
                 <!--削除ボタン!-->
                 <div >
-                    <input name = "sakujo_b" type="submit" value="削除" class="button2">
+                    <input name="sakujo_b" type="submit" value="削除" class="button2" onclick="clearFields()">
                 </div>
             </div>
             <style>
@@ -167,5 +168,13 @@ try {
     <div id="back_button3">
         <a class="Button3" href="page3.php" text align="center">戻る</a>
     </div>
+    <script>
+        function clearFields() {
+            document.getElementsByName('un_1')[0].value = '';
+            document.getElementsByName('un_2')[0].value = '';
+            document.getElementsByName('un_3')[0].value = '';
+            document.getElementsByName('un_4')[0].value = '';
+        }
+    </script>
 </body>
 </html>

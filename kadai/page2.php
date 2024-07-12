@@ -19,7 +19,7 @@
     <h1>おみくじを引いてみよう！ </h1>
     <div id="button_01">
         <!-- 運気設定画面にいく -->
-        <a class="Button" href="page4.php">運気設定</a>
+        <a class="Button" href="page4.php">内容設定</a>
     </div>
     <div id="sr">
         <!-- 結果発表画面にいく -->
