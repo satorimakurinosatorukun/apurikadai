@@ -16,8 +16,10 @@ body {
 }
 .login-screen {
     background-color: hsl(200, 88%, 73%);
-    padding: 20px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 33px;
+    height: 400;
+    width: 360;
 }
 
 .app-title {
@@ -67,5 +69,18 @@ input:focus {
 }
 
 .btn:hover {
-    background-color: #2980B9;
+    background-color: #2ea1ee;
 }
+
+.buttom_1 {
+    width: 250px;
+    padding: 1px;
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+
+
+

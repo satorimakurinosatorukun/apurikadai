@@ -30,14 +30,7 @@ try {
             $stm_update = $pdo->prepare($sql_update);
             $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
             $stm_update->execute();
-
-            //上のやつは持ってきただけやしデータベースないけ見れんけ、壮亜があとは変えてくれ！！！！！！！！！！！！！！！！！
-            //ラインでも言った通りそもそもデータベースに登録するなら上の奴が必要と思うけど、間に合わんそうなら元々データベース
-            //に入れとって、うったユーザーネーム、パスワードがデータベースにあるやつと同じならログインボタンを押したらpage1に
-            //にいけるみたいにするかどうかやね、
-            //やりよることはもうpage4と変わらんと思うけど、ログインボタンを押してログインできる時の条件を書くのがワンチャン
-            //大変かもしれん！！できそうにないならもう変えてもうろてもけっこう！！！！おやすみ...
-
+            
         }
     }
     
@@ -76,9 +69,11 @@ try {
                 </div>
 
                 <input name = "roguin_b" type="submit" value="ログイン" class="btn btn-primary btn-large btn-block" href="page1.php">
-                <a class="login-link" href="#">Lost your password?</a>
+                <input name = "touroku_b" type="submit" value="新規登録" class="buttom_1">
+                
 
             </div>
+                <a class="login-link" href="#">パスワードをお忘れの方はこちら</a>
         </div>
     </div>
 </body>
