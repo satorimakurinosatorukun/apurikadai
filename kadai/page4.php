@@ -165,7 +165,7 @@ try {
     <!-- 戻るボタン -->
 
     <div id="back_button3">
-        <a class="Button3" href="page2.php" text align="center">戻る</a>
+        <a class="Button3" href="page1.php" text align="center">戻る</a>
     </div>
     <!--引くボタン -->
 

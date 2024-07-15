@@ -16,21 +16,41 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if($_SERVER["REQUEST_METHOD"]  == "POST"){
-        if(isset($_POST['roguin_b'])){//ログインボタンが押された場合
-            //usernameの登録
-            $new_un1 = $_POST[''];
-            $sql_update = "UPDATE unki SET un = :sql_1 WHERE ID = 1 ";
-            $stm_update = $pdo->prepare($sql_update);
-            $stm_update->bindParam(':sql_1', $new_un1, PDO::PARAM_STR);
-            $stm_update->execute();
+        if(isset($_POST['touroku_b'])){//新規登録ボタンが押された場合
+            // ユーザー名とパスワードの取得（HTMLエスケープを適用）
+            $user_name_sql = es($_POST['user_name']);
+            $user_password_sql = es($_POST['user_password']);
 
-            //passwordの登録
-            $new_un2 = $_POST[''];
-            $sql_update = "UPDATE unki SET un = :sql_2 WHERE ID = 2 ";
-            $stm_update = $pdo->prepare($sql_update);
-            $stm_update->bindParam(':sql_2', $new_un2, PDO::PARAM_STR);
-            $stm_update->execute();
-            
+            // SQLインジェクション対策のためにプリペアドステートメントを使用
+            $sql_insert = "INSERT INTO `login_table` (`username_d`, `userpassword_d`) VALUES (:sql_1, :sql_2)";
+            $stm_insert = $pdo->prepare($sql_insert);
+            $stm_insert->bindParam(':sql_1', $user_name_sql, PDO::PARAM_STR);
+            $stm_insert->bindParam(':sql_2', $user_password_sql, PDO::PARAM_INT);
+            $stm_insert->execute();
+
+            echo "新規登録が完了しました。";
+        }
+        if (isset($_POST['roguin_b'])) { // ログインボタンが押された場合
+            // ユーザー名とパスワードの取得
+            $user_name_sql = es($_POST['user_name']);
+            $user_password_sql = es($_POST['user_password']);
+
+            // ユーザー認証のSQLクエリ
+            $sql_authenticate = "SELECT * FROM `login_table` WHERE `username_d` = :username AND `userpassword_d` = :password";
+            $stm_authenticate = $pdo->prepare($sql_authenticate);
+            $stm_authenticate->bindParam(':username', $user_name_sql, PDO::PARAM_STR);
+            $stm_authenticate->bindParam(':password', $user_password_sql, PDO::PARAM_INT);
+            $stm_authenticate->execute();
+
+            // ユーザーが存在するかチェック
+            if ($stm_authenticate->rowCount() > 0) {
+                // 認証成功した場合は次の画面にリダイレクト
+                header("Location: page1.php");
+                exit();
+            } else {
+                // 認証失敗時の処理
+                echo '<span>ユーザネームもしくはパスワードが違います</span><br>';
+            }
         }
     }
     
@@ -55,25 +75,24 @@ try {
             <div class="app-title">
                 <h1>Login</h1>
             </div>
+            <form action="page0.php" method="post">
+                <div class="login-form">
 
-            <div class="login-form">
+                    <div class="control-group">
+                        <input name="user_name" type="text" class="login-field" value="ユーザーネーム" placeholder="username" id="login-name"><!--そうあくんvalueの中身なくてもいいかもしれん-->
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
 
-                <div class="control-group">
-                <input name="user_name" type="text" class="login-field" value="ユーザーネーム" placeholder="username" id="login-name"><!--そうあくんvalueの中身なくてもいいかもしれん-->
-                <label class="login-field-icon fui-user" for="login-name"></label>
+                    <div class="control-group">
+                        <input name="user_password" type="password" class="login-field" value="パスワード" placeholder="password" id="login-pass"><!--上記と同じかも-->
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+                    <input name = "roguin_b" type="submit" value="ログイン" class="btn btn-primary btn-large btn-block">
+                    <input name = "touroku_b" type="submit" value="新規登録" class="buttom_1">
+
                 </div>
-
-                <div class="control-group">
-                <input name="user_password" type="password" class="login-field" value="パスワード" placeholder="password" id="login-pass"><!--上記と同じかも-->
-                <label class="login-field-icon fui-lock" for="login-pass"></label>
-                </div>
-
-                <input name = "roguin_b" type="submit" value="ログイン" class="btn btn-primary btn-large btn-block" href="page1.php">
-                <input name = "touroku_b" type="submit" value="新規登録" class="buttom_1">
-                
-
-            </div>
-                <a class="login-link" href="#">パスワードをお忘れの方はこちら</a>
+            </form>
+            <a class="login-link" href="#">パスワードをお忘れの方はこちら</a>
         </div>
     </div>
 </body>

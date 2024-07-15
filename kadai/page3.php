@@ -33,7 +33,6 @@
                 exit();
             }
         }
-        
     }
 ?>  
 <!DOCTYPE html>
