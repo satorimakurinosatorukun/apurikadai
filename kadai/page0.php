@@ -79,12 +79,12 @@ try {
                 <div class="login-form">
 
                     <div class="control-group">
-                        <input name="user_name" type="text" class="login-field" value="ユーザーネーム" placeholder="username" id="login-name"><!--そうあくんvalueの中身なくてもいいかもしれん-->
+                        <input name="user_name" type="text" class="login-field" value="" placeholder="username" id="login-name">
                         <label class="login-field-icon fui-user" for="login-name"></label>
                     </div>
 
                     <div class="control-group">
-                        <input name="user_password" type="password" class="login-field" value="パスワード" placeholder="password" id="login-pass"><!--上記と同じかも-->
+                        <input name="user_password" type="password" class="login-field" value="" placeholder="password" id="login-pass">
                         <label class="login-field-icon fui-lock" for="login-pass"></label>
                     </div>
                     <input name = "roguin_b" type="submit" value="ログイン" class="btn btn-primary btn-large btn-block">
