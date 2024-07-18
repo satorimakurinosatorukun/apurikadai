@@ -11,19 +11,18 @@ function es($data) {
 }
 try {
     //データベースの接続
-    $pdo = new PDO($dsn , $user , $password);
-    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);//->　は　〜の
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO($dsn , $user , $password);//pdoというデータベースにつなぐための機械を生成（インスタンスの作成）
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);//pdoの中身に機能を入れてる
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//pdoの中身に機能を入れてる
 
-    if($_SERVER["REQUEST_METHOD"]  == "POST"){
+    if($_SERVER["REQUEST_METHOD"]  == "POST"){//ポストメソッドが発動されたら実行
         if(isset($_POST['touroku_b'])){//新規登録ボタンが押された場合
             // ユーザー名とパスワードの取得（HTMLエスケープを適用）
-            $user_name_sql = es($_POST['user_name']);
-            $user_password_sql = es($_POST['user_password']);
+            $user_name_sql = es($_POST['user_name']);        //POSTメソッドで受け取ったモノを変数に格納
+            $user_password_sql = es($_POST['user_password']);//es関数を使うことによってsqlインジェクション対策になる
 
-            // SQLインジェクション対策のためにプリペアドステートメントを使用
             $sql_insert = "INSERT INTO `login_table` (`username_d`, `userpassword_d`) VALUES (:sql_1, :sql_2)";
-            $stm_insert = $pdo->prepare($sql_insert);
+            $stm_insert = $pdo->prepare($sql_insert);//与えられたSQL文をデータベースに対して準備
             $stm_insert->bindParam(':sql_1', $user_name_sql, PDO::PARAM_STR);
             $stm_insert->bindParam(':sql_2', $user_password_sql, PDO::PARAM_INT);
             $stm_insert->execute();
@@ -43,7 +42,7 @@ try {
             $stm_authenticate->execute();
 
             // ユーザーが存在するかチェック
-            if ($stm_authenticate->rowCount() > 0) {
+            if ($stm_authenticate->rowCount() > 0) {//実行された結果として１行以上帰ってきたら実行
                 // 認証成功した場合は次の画面にリダイレクト
                 header("Location: page1.php");
                 exit();
