@@ -27,7 +27,8 @@ try {
             $stm_insert->bindParam(':sql_2', $user_password_sql, PDO::PARAM_INT);
             $stm_insert->execute();
 
-            echo "新規登録が完了しました。";
+            echo "<script>alert('新規登録されました！')</script>";
+
         }
         if (isset($_POST['roguin_b'])) { // ログインボタンが押された場合
             // ユーザー名とパスワードの取得
@@ -88,10 +89,9 @@ try {
                     </div>
                     <input name = "roguin_b" type="submit" value="ログイン" class="btn btn-primary btn-large btn-block">
                     <input name = "touroku_b" type="submit" value="新規登録" class="buttom_1">
-
                 </div>
             </form>
-            <a class="login-link" href="#">パスワードをお忘れの方はこちら</a>
+            <a class="login-link" href="page0_1.php">パスワードをお忘れの方はこちら</a>
         </div>
     </div>
 </body>
