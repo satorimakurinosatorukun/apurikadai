@@ -10,7 +10,8 @@
     <div class="container">
         <h2>パスワードを忘れた場合</h2>
         <p>登録したメールアドレスを入力してください。<br>
-            パスワードリセットの手順をメールで送信します。</p>
+            パスワードリセットの手順をメールで送信します。
+        </p>
         <form action="password_reset.php" method="post">
             <label for="email">メールアドレス：</label>
             <input type="email" id="email" name="email" required>

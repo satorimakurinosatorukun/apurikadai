@@ -49,7 +49,7 @@ try {
                 exit();
             } else {
                 // 認証失敗時の処理
-                echo '<span>ユーザネームもしくはパスワードが違います</span><br>';
+                echo "<script>alert('ユーザネームもしくはパスワードが違います')</script>";
             }
         }
     }
