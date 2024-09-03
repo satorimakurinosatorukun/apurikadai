@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.div{
+    width: 250px;
+}
+
 body{
     background: #ffffff url(haikei.jpeg);
 }
@@ -9,6 +13,7 @@ body{
 h1{
     font-size: 40px;
     position: relative;
+    width: 250px;
     top: 60px;
     left: 620px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -71,7 +76,7 @@ table{
     position: relative;
     top: 30px;
     right: 100px;
-    width: 140px;
+    width: 120px;
     margin: auto;
     padding: 1rem 4rem;
     font-weight: bold;
