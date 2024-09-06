@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
 
 body{
-    background: #ffffff url(haikei.jpeg);
+    background: #ffffff url(karahuru.webp);
 }
 h1{
     position: relative;
     top: 60px;
-    font-size: large;
+    font-size: 50px;
 }
 
 
