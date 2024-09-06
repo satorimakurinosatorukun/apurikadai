@@ -35,6 +35,9 @@
 <div id="startbutton">
     <a class="Button3" href="page4.php"> ス タ ー ト </a>
 </div>
+<div id="modoru">
+    <a class="Button4" href="page0.php"> ログイン画面に戻る </a>
+</div>
     
     <img id="om" src="omikuziirasuto1.jpeg" alt="おみくじの画像" class="right" width="150">
     <img id="om2"src="omikuzirasuto2.jpeg" width="230">
