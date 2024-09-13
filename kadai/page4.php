@@ -87,7 +87,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="gamen4.css">
-    <title>おみくじ</title>
+    <title>フリーくじー</title>
 </head>
 <body>
     <h1>内容設定</h1>

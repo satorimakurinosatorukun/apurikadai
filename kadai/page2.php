@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="gamen2.css">
-    <title>おみくじ</title>
+    <title>フリーくじー</title>
 </head>
 
 <body>

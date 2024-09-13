@@ -40,7 +40,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="gamen3.css">
-        <title>おみくじ</title>
+        <title>フリーくじー</title>
     </head>
     <style>
         h1{

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="gamen1.css">
-    <title>おみくじ</title>
+    <title>フリーくじー</title>
     <style>
         h1{
             text-align: center;
@@ -31,7 +31,7 @@
 </head>
 <body>
     
-<h1>あなたの運勢おみくじタッチで占いましょう！！ </h1>
+<h1>あなたの運勢フリーくじーで占いましょう！！ </h1>
 <div id="startbutton">
     <a class="Button3" href="page4.php"> ス タ ー ト </a>
 </div>
